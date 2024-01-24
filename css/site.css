@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  position: relative;
+  letter-spacing: 0.04em;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --abe: #35ABE2;
+  --red: #D03635;
+  --darkred: #CF3636;
+  --black: #110101;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+
+#abe {
+  background: linear-gradient(-90deg, var(--abe), var(--red));
+  background-size: 600% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-90deg, var(--abe), var(--red));
+  background-size: 600% 400%;
+  animation: gradient 15s ease infinite;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+}
+
+.logo img {
+  max-width: 15rem;
+}
+
+section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+.spacer {
+  height: 30vh;
+  padding-top: 2rem;
+  background: var(--abe);
+}
+
+.backgrndoff {
+  background-image: none
+}
+
+
+.one {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../assets/images/1.jpg');
+  background-size: cover;
+  position: absolute;
+}
+
+.two {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../assets/images/2.jpg');
+  background-size: cover;
+  position: absolute;
+}
+
+.three {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../assets/images/3.jpg');
+  background-size: cover;
+  position: absolute;
+}
+
+h1 {
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.revealUp {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
