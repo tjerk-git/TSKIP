@@ -19,7 +19,7 @@ var tl = gsap.timeline({
 });
 
 tl.from(".line-3", { scaleX: 0, transformOrigin: "left center", ease: "none" }, 1)
-  .to(images[0], 5, { autoAlpha: 0, scale: 1.2 }) // Zoom in effect
+  .to(images[0], 5, { scale: 1.2 }) // Zoom in effect
   .to(images[0], 1.4, { autoAlpha: 0 })
   .to(images[1], 8, { autoAlpha: 0, scale: 1.2 }, '-=1') // Zoom in effect
   .to(images[1], 1.4, { autoAlpha: 0 })
