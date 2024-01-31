@@ -7,27 +7,102 @@ let tlWrapper = gsap.timeline({
     trigger: ".js-pin-container",
     pin: ".js-pin-container",
     start: "top top",
-    end: "+=800%",
+    end: "+=900%",
     scrub: 1
   }
 });
 
-tlWrapper.from('.number_one', { autoAlpha: 0, duration: 0.5 }, animTime);
+tlWrapper.from('.number_one', {
+  autoAlpha: 0,
+  y: 80,
+  duration: 0.3,
+  onComplete: function () {
+    // Hide the element when the animation is complete
+    TweenMax.set('.number_one', { autoAlpha: 0, duration: 0.5 });
+    TweenMax.set('.number_one', { y: 0, duration: 0.3 });
+  }
+}, animTime);
+
+tlWrapper.to(".image", { scale: 1.3, duration: 0.3 }, animTime);
 animTime += 0.5;
-tlWrapper.from('.number_two', { autoAlpha: 0, duration: 0.5 }, animTime);
+tlWrapper.to(".image", { scale: 1, duration: 0.3 }, animTime);
+
+tlWrapper.to("#image_one", { autoAlpha: 0, duration: 0.1 }, animTime);
+
 animTime += 0.5;
-tlWrapper.from('.number_three', { autoAlpha: 0, duration: 0.5 }, animTime);
+
+tlWrapper.from('.number_two', {
+  autoAlpha: 0,
+  y: 80,
+  duration: 0.3,
+  onComplete: function () {
+    // Hide the element when the animation is complete
+    TweenMax.set('.number_two', { autoAlpha: 0, duration: 0.5 });
+    TweenMax.set('.number_two', { y: 0, duration: 0.3 });
+  }
+}, animTime);
+
+tlWrapper.to(".image", { scale: 1.3, duration: 0.3 }, animTime);
+animTime += 0.5;
+
+tlWrapper.to("#image_two", { autoAlpha: 0, duration: 0.1 }, animTime);
+
+tlWrapper.to(".image", { scale: 1, duration: 0.3 }, animTime);
+
 animTime += 0.5;
 
 
-// tl.from(".line-3", { scaleX: 0, transformOrigin: "left center", ease: "none" }, 1)
-//   .to(images[0], 5, { scale: 1.2 }) // Zoom in effect
-//   .to(images[0], 5, { autoAlpha: 0 })
-//   .to(images[1], 10, { autoAlpha: 0, scale: 1.2 }) // Zoom in effect
-//   .to(images[1], 5, { autoAlpha: 0 })
-//   .to(images[2], 5, { autoAlpha: 1, scale: 1.2 }) // Zoom in effect
-//   .to(images[2], 1.4, { autoAlpha: 0 })
-//   .to(images[0], 5, { scale: 1.2 });
+tlWrapper.from('.number_three', {
+  autoAlpha: 0,
+  y: 80,
+  duration: 0.2,
+  onComplete: function () {
+    // Hide the element when the animation is complete
+    TweenMax.set('.number_three', { autoAlpha: 0, duration: 0.5 });
+    TweenMax.set('.number_three', { y: 0, duration: 0.3 });
+  }
+}, animTime);
+
+tlWrapper.to(".image", { scale: 1.3, duration: 0.3 }, animTime);
+animTime += 0.5;
+
+tlWrapper.to("#image_three", { autoAlpha: 0, duration: 0.1 }, animTime);
+tlWrapper.to(".image", { scale: 1, duration: 0.3 }, animTime);
+
+animTime += 0.5;
+tlWrapper.from('.number_four', {
+  autoAlpha: 0,
+  y: 80,
+  duration: 0.2,
+  onComplete: function () {
+    // Hide the element when the animation is complete
+    TweenMax.set('.number_four', { y: 0, duration: 0.3 });
+  }
+}, animTime);
+
+
+animTime += 0.5;
+
+// every li item within auto-grid appears one after the other
+gsap.utils.toArray(".auto-grid li").forEach(function (elem, index) {
+  gsap.fromTo(
+    elem,
+    { autoAlpha: 0, y: 100 },
+    {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.5,
+      ease: "ease-in-out",
+      scrollTrigger: {
+        trigger: elem,
+        start: "top 80%",
+        end: "bottom 10%",
+        markers: true,
+        toggleActions: "play none none reverse"
+      }
+    }
+  ), animTime;
+});
 
 
 gsap.utils.toArray(".revealUp").forEach(function (elem) {
