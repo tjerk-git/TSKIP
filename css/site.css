@@ -54,8 +54,6 @@ header{
   height:8rem;
   border-bottom:3px solid black;
   border:1px solid blue;
-  position: sticky;
-  top: 0;
   background:white;
 }
 
@@ -65,21 +63,19 @@ header{
   height:100%;
   max-width:1200px;
   margin:0 auto;
-  border:1px solid red;§
-  background: var(--abe);
 }
 
 .video__container{
   padding-top:8rem;
   background: var(--abe);
-  width:100%;
+  width:95%;
   margin:0 auto;
   padding-bottom:8rem;
 }
 
 video{
-  width:80%;
-  height:80%;
+  width:85%;
+  height:85%;
   margin:0 auto;
   display:block;
 }
@@ -88,7 +84,6 @@ main{
   width:100%;
   max-width:1200px;
   margin:0 auto;
-  border:1px solid coral;
 }
 
 .menu__container{
@@ -97,22 +92,19 @@ main{
   display:flex;
   justify-content: space-between;
   align-items: center;
-  border:1px solid red;
   position: relative;
 }
 
 .logo{
-  min-width:30rem;
-  max-width:30rem;
-  padding-left:8rem;
-  padding-right:8rem;
-  padding-top:2rem;
-  padding-bottom:2rem;
-  border:1px solid green;
-  transition: all 0.3s ease;
+  padding:6rem;
   background: var(--abe);
-  padding:2rem;
   z-index:1;
+}
+
+.logo img{
+  width:20rem;
+  height:100%;
+  max-width:100%;
 }
 
 
@@ -148,14 +140,14 @@ nav ul li:last-child{
 
 section{
   width:100%;
-  border:1px solid red;
 }
 
 .planned__events{
   padding:4rem;
-  border:3px solid blue;
   background: var(--abe);
   min-height:50vw;
+  width:95%;
+  margin:0 auto;
 }
 
 .planned__events h1{
