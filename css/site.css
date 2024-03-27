@@ -158,6 +158,14 @@ section {
   display: flex;
   position: relative;
   margin-top: -8rem;
+  position: relative;
+}
+
+.red_border {
+  position: absolute;
+  border: 8px solid var(--darkred);
+  width: 100%;
+  bottom: 50%;
 }
 
 #map {
@@ -314,6 +322,11 @@ h2 {
   max-width: 30rem;
 }
 
+.big_title_container h2 {
+  font-size: 4rem;
+}
+
+
 .normal_body {
   font-size: 2rem;
   line-height: 2.4rem;
@@ -371,6 +384,10 @@ h2 {
   margin: 0 auto;
   flex-direction: column;
   align-items: center;
+}
+
+.succesverhalen h2 {
+  font-size: 4rem;
 }
 
 .cards_container {
@@ -451,7 +468,7 @@ h2 {
 
 #tienskip__map {
   display: flex;
-  max-width: 1000px;
+  max-width: 1100px;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
@@ -465,12 +482,12 @@ h2 {
 .jsmaps-text {
   background: white;
   padding: 4rem !important;
-  border-radius: 8rem 8rem 0 0;
   margin-left: 20rem !important;
+  border-radius: 8rem 0px 8rem 0px;
 }
 
 .big_text {
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 700;
   color: white;
   text-transform: uppercase;
@@ -647,4 +664,41 @@ footer {
   justify-content: center;
   align-items: center;
   margin-top: 4rem;
+}
+
+.mini_event {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 3rem;
+}
+
+.mini_event_container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0px;
+}
+
+.mini_event_title {
+  background: white;
+  color: var(--black);
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 1rem;
+  display: inline-block;
+}
+
+.mini_event_location {
+  background: var(--darkred);
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1rem;
+  display: inline-block;
 }
